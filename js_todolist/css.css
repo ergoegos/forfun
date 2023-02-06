@@ -1,0 +1,110 @@
+
+        .shakked {
+            animation: shake 0.3s;
+        }
+
+
+        body {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: stretch;
+            justify-content: flex-start;
+
+            background: #eee;
+        }
+
+        /* Style the input */
+        input {
+            margin: 0;
+            border: none;
+            width: 70%;
+            padding: 10px;
+
+            font-size: 16px;
+            background-color: #d9d9d9;
+            
+            
+
+        }
+
+        input:focus {
+            background-color: #fff;
+            
+        }
+
+        /* Style the "Add" button */
+        button {
+            padding: 10px;
+            width: 20%;
+            background: #d9d9d9;
+            color: #666;
+
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            border: none;
+
+        }
+
+        button:focus {
+            background-color: #f44336;
+            color: #eee;
+        }
+
+        button:hover {
+            background-color: #f44336;
+            color: #eee;
+        }
+
+        h1 {
+            margin-bottom: 0px;
+        }
+        ul {
+            margin-top: 0px;
+        }
+        ul li {
+            cursor: pointer;
+            position: relative;
+
+            
+
+            /* \2714*/
+            list-style: ">";
+            padding: 8px;
+            font-size: 18px;
+            transition: 0.2s;
+
+            /* make the list items unselectable */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        ul li:hover {
+            padding-left: 16px;
+            font-weight: bolder;
+            font-size: 1.5em;
+        }
+
+        ul li.finished {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+        }
+
+        /* Add a "checked" mark when clicked on */
+        ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: #fff;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+        }
