@@ -8,33 +8,33 @@
 
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="../css_keyframes/shake.css">
-    
-    <title>TO DO</title>
+    <link rel="stylesheet" href="../css_responsive/rwd_media_query.css">
+
+    <title>TO DO LIST</title>
 </head>
 
-<body>
+<body class="col-8" >
+    
+        <h1> >> to do list</h1>
 
+        <ul id="list_todo">
+            <li class="item_todo"> JavaScript To-Do List. </li>
+            <li class="item_todo"> JavaScript Quiz. </li>
+            <li class="item_todo"> JavaScript Pong Game. </li>
+            <li class="item_todo"> JavaScript Tic Tac Toe. </li>
+            <li class="item_todo"> JavaScript Pairs Game. </li>
+            <li class="item_todo"> JavaScript Hangman Game Project. </li>
+            <li class="item_todo"> JavaScript Timeline. </li>
+            <li class="item_todo"> JavaScript Maze Game Project. </li>
 
-    <h1> >> to do list</h1>
+        </ul>
+    
+        <div id="add_todo_container" >
+            <input type="text" id="add_todo_input" class="col-6 " placeholder="learn javascript...">
+            <button onclick="add_todo();" id="add_todo_button" class="col-4 ">add task</button>
+        </div>
 
-
-
-    <ul id="list_todo">
-        <li class="item_todo"> JavaScript To-Do List. </li>
-        <li class="item_todo"> JavaScript Quiz. </li>
-        <li class="item_todo"> JavaScript Pong Game. </li>
-        <li class="item_todo"> JavaScript Tic Tac Toe. </li>
-        <li class="item_todo"> JavaScript Pairs Game. </li>
-        <li class="item_todo"> JavaScript Hangman Game Project. </li>
-        <li class="item_todo"> JavaScript Timeline. </li>
-        <li class="item_todo"> JavaScript Maze Game Project. </li>
-    </ul>
-    <div id="add_todo_container">
-        <input type="text" id="add_todo_input" placeholder="learn javascript...">
-        <button onclick="add_todo()">add task</button>
-    </div>
-
-
+   
     <script src="js.js"></script>
 </body>
 

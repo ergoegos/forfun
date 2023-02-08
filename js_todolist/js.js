@@ -1,4 +1,6 @@
 const add_todo_input = document.getElementById("add_todo_input");
+const add_todo_button = document.getElementById("add_todo_button");
+
 const list_todo = document.getElementById("list_todo");
 
 // onclick button
@@ -15,10 +17,9 @@ async function add_todo() {
 
         // shake the input box
         add_todo_input.classList.add('shakked');
-        await new Promise(resolve => setTimeout(resolve, 150));
+        await new Promise(resolve => setTimeout(resolve, 150)); //timeout
         add_todo_input.classList.remove('shakked');
 
-        // add_todo_input.style.animation = 'shake 0.5s';
 
     } else {
 
@@ -26,21 +27,26 @@ async function add_todo() {
         list_todo.appendChild(li);
         add_todo_input.value = "";
 
-        // scroll to bottom
-        window.scrollTo(0, li.scrollHeight)
+        // scroll to button
+        add_todo_button.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
     }
-
-    // reset shake animation
-    //add_todo_input.style.animation = 'none';
-    //add_todo_input.style.animation = null;
-
 
 }
 
-addEventListener('DOMContentLoaded', (event) => {
 
+function didit() {
+    let list = document.querySelector('ul');
+    list.addEventListener('click', function (ev) {
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+        }
+    }, false);
+}
+
+addEventListener('DOMContentLoaded', function (event) {
+
+    didit();
     add_todo_input.focus();
 
-
-});
+}, false);
 
