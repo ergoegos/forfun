@@ -4,7 +4,7 @@
 
 
 body {
-    
+
     padding: 16px;
     background: #eee;
 }
@@ -13,19 +13,19 @@ body {
 
 
 /* Add a "checked" mark when clicked on */
-.checked{
+.checked {
     list-style: "\2714";
     text-decoration: line-through;
 }
 
-
 ul li {
+ 
     list-style: ">";
 
     cursor: pointer;
     position: relative;
+    
 
-    overflow: hidden; 
 
     padding: 8px;
     font-size: 18px;
@@ -58,24 +58,24 @@ ul li.finished {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-   
+
 }
 
-#add_todo_container > #add_todo_input {
+#add_todo_container>#add_todo_input {
 
     margin: 0;
     border: none;
 
     padding: 10px;
-   
+
     font-size: 16px;
     background-color: #d9d9d9;
 
-    
+
 
 }
 
-#add_todo_container > #add_todo_input:focus {
+#add_todo_container>#add_todo_input:focus {
     background-color: #fff;
 
 }
@@ -95,12 +95,12 @@ ul li.finished {
 
 }
 
-#add_todo_container > button:focus {
+#add_todo_container>button:focus {
     background-color: #f44336;
     color: #eee;
 }
 
-#add_todo_container > button:hover {
+#add_todo_container>button:hover {
     background-color: #f44336;
     color: #eee;
 }
