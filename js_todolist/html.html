@@ -16,7 +16,10 @@
 <body class="col-8" >
     
         <h1> >> to do list</h1>
-
+        <div id="add_todo_container" >
+            <input type="text" id="add_todo_input" class="col-6 " placeholder="learn javascript...">
+            <button onclick="add_todo();" id="add_todo_button" class="col-4 ">add task</button>
+        </div>
         <ul id="list_todo">
             <li class="item_todo"> JavaScript To-Do List. </li>
             <li class="item_todo"> JavaScript Quiz. </li>
@@ -29,10 +32,7 @@
 
         </ul>
     
-        <div id="add_todo_container" >
-            <input type="text" id="add_todo_input" class="col-6 " placeholder="learn javascript...">
-            <button onclick="add_todo();" id="add_todo_button" class="col-4 ">add task</button>
-        </div>
+    
 
    
     <script src="js.js"></script>

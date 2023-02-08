@@ -4,15 +4,12 @@
 
 
 body {
+    
     padding: 16px;
     background: #eee;
 }
 
 
-
-h1 {
-    margin-bottom: 0px;
-}
 
 
 /* Add a "checked" mark when clicked on */
@@ -21,18 +18,15 @@ h1 {
     text-decoration: line-through;
 }
 
-ul {
-    margin-top: 0px;
-}
 
 ul li {
+    list-style: ">";
+
     cursor: pointer;
     position: relative;
 
+    overflow: hidden; 
 
-
-    /* \2714*/
-    list-style: ">";
     padding: 8px;
     font-size: 18px;
     transition: 0.2s;
