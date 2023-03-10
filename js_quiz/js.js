@@ -33,15 +33,29 @@ const QUESTIONS = [{
 
 const div_score = document.getElementById("score");
 const div_question = document.getElementById("question");
-const div_answer = document.getElementById("answer");
+let form_asnwer = document.getElementById("answer");
 
 function print(id) {
 
-   
-    
-    div_question.innerText = 
-    QUESTIONS[id] + 
-    QUESTIONS[id].a.forEach(answer => answer.text);
+    let question = QUESTIONS[id];
+
+    let answers = question.a;
+
+    answers.forEach(answer => form_asnwer.appendChild(
+        
+        document.createElement("input").appendChild(
+
+            document.createTextNode(answer.text)
+
+        )       
+
+    ))
+
+    for (let i = 0; i < answers.length; i++) {
+        const answer = answers[i];
+        answer.textContent = question.a[i].text;
+
+    }
 
 }
 
@@ -66,7 +80,7 @@ addEventListener('DOMContentLoaded', function (event) {
     button_back.addEventListener(
         "click",
         function () {
-            if (questions_id != 1) questions_id -= 1;
+            if (questions_id >= 1) questions_id -= 1;
             print(questions_id);
             // console.log(questions_navegation);
         }
@@ -76,7 +90,7 @@ addEventListener('DOMContentLoaded', function (event) {
     button_next.addEventListener(
         "click",
         function () {
-            if (questions_id != QUESTIONS.length) questions_id += 1;
+            if (questions_id <= QUESTIONS.length) questions_id += 1;
             print(questions_id);
             // console.log(questions_navegation);   
         }
@@ -86,7 +100,7 @@ addEventListener('DOMContentLoaded', function (event) {
     const evaluate = () => div_score.innerHTML = "score:" + questions_score;
     button_evaluate.addEventListener(
         "click",
-        print()
+        print(questions_id)
     );
 
 
